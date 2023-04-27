@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env pythonWaypointGenerator
 
 import rospy
 from your_package.msg import GPSGoalList
@@ -113,4 +113,3 @@ class WaypointGenerator:
         # Project the twisted point onto the map
         projected_point = rospy.wait_for_message('/projected_map_node/costmap/cell', NavSatFix)
         return GeoPointStamped(projected_point.header, projected_point.latitude + twist.latitude, projected_point.longitude + twist.longitude, projected_point.altitude)
-
