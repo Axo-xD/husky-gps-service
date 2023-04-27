@@ -1,0 +1,3 @@
+husky_gps_service/GPSGoalList goals
+---
+sensor_msgs/NavSatFix[] waypoints

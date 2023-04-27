@@ -1,8 +1,8 @@
 #!/usr/bin/env pythonWaypointGenerator
 
 import rospy
-from your_package.msg import GPSGoalList
-from your_package.srv import GenerateWaypoints, GenerateWaypointsResponse
+from husky_gps_service.msg import GPSGoalList
+from husky_gps_service.srv import GenerateWaypoints, GenerateWaypointsResponse
 from sensor_msgs.msg import NavSatFix
 from geographic_msgs.msg import GeoPointStamped
 from geographic_msgs.srv import GetGeoPath
