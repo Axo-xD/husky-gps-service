@@ -4,7 +4,7 @@
 
 This service communicates with the web app to save data points from user.
 
-It saves the data to packet folder in `src` folder. In a txt file where each line is a gps poins `lan,lat`.
+It saves the data to packet folder in `src` folder. In a txt file where each line is a gps poins `lat,lan`.
 
 Use following comand to start service:
 ```
