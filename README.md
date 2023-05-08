@@ -1,33 +1,29 @@
-# husky-gps-service
+# Service for Husky
 
-## test_generate_waypoints
+## gps_user_service
 
-Here are the steps you can follow to run the test file:
+This service communicates with the web app to save data points from user.
 
-1. Start the ROS master:
+It saves the data to root folder. In a txt file where each line is a gps poins `lan,lat`.
 
-```shell
-$ roscore
+Use following comand to start service:
+```
+rosrun gps_user_service gps_user_service_server.py
 ```
 
-2. Start the waypoint_generator_node that provides the generate_waypoints service:
-
-``` shell
-$ rosrun husky_gps_service waypoint_generator_node
+Can be tested by using test client when service are running:
+```
+rosrun gps_user_service gps_user_service_client.py
 ```
 
-3. Open a new terminal and navigate to the directory that contains the test file.
+### Message type 
 
-4. Make the test file executable:
+Uses SaveGPS.srv to defind request and response message.
 
-```shell
-$ chmod +x test_waypoint_generator.py
 ```
-
-3. Run the test file:
-
-```shell
-$ ./test_waypoint_generator.py
+# Request
+sensor_msgs/NavSatFix[] gps_coordinates
+---
+# Response
+bool success
 ```
-
-This should call the generate_waypoints service with the predefined GPS goals and print the list of generated waypoints.
