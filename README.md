@@ -31,7 +31,7 @@ bool success
 ## read_file
 A ROS pack that contains `get_data.py` for extracting the data saved by `gps_user_service` and return a list of tuples with gps coordinates.
 
-Buld as a packet and run using:
+Build as a packet and run using:
 ```
 rosrun read_file get_data.py
 ```
